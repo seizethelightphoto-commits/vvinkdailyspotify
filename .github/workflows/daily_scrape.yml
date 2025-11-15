@@ -2,11 +2,10 @@ name: Daily Spotify Listener Scraper
 
 on:
   schedule:
-    # Runs every day at 00:00 UTC (Midnight UTC).
-    # You can change '0 0' to adjust the hour for your timezone if necessary.
-    - cron: '0 0 * * *'
+    # Schedule to run every day at 16:00 UTC.
+    # 16:00 UTC is equivalent to 12:00 AM (Midnight) GMT+8.
+    - cron: '0 16 * * *'
   workflow_dispatch:
-    # Allows you to manually trigger the workflow from the GitHub Actions tab
 
 jobs:
   scrape_data:
